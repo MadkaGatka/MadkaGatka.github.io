@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+      <title>MadkaGatka - Pisz z madką jak równy z równym 👊</title>
+</head>
+<body>
+      <section class="container">
+            <div class="description">
+                  Pisz z madką jak równy z równym 👊
+            </div>
+            <div class="difficulty__lvl">
+                  <div class="lvl__container">
+                        <label for="lvl"> &bull; Poziom: &nbsp; </label>
+                        <div class="lvl" id="lvl"> latwy </div>
+                  </div>
+                  <input type="range" id="diff_lvl" name="lvl" min="0" max="4" class="diff_lvl" value="0">
+            </div>
+            <textarea name="translate" id="translate" cols="90" rows="10" class="translate" spellcheck="true">Potrzebne są krzesła bo nie ma na czym usiąść, a dzieci też by chciały się kiedykolwiek pobawić. </textarea>
+            <button class="translate__btn btn" id="translate__btn">
+                  po madkowemu
+            </button>
+            <textarea class="translated" id="translated" cols="90" rows="10" spellcheck="false"></textarea>
+            <button class="copyToClipboard btn" id="copyToClipboard">kopiuj</button>
+      </section>
+      <footer class="footer share">
+            <p>
+                  Sugestie i uwagi proszę kierować na  <br>
+                  <a href="mailto:madka.gatka@wp.pl">madka.gatka@wp.pl</a>
+            </p>
+      </footer>
+      <script src="scripts/script.js"></script>
+</body>
+</html>

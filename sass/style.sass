@@ -1,0 +1,178 @@
+$backgroundYellow: #fcd654
+$primaryYellow: #ff9618
+// $primaryYellow: #f7b532
+$hoverYellow: #ffa628
+$lightWhite: #fff7e7
+$lightYellow: #ffe89b
+$fireIcon: 'http://tiny.cc/o61saz'
+*
+	box-sizing: border-box
+	font-family: 'Roboto', sans-serif !important
+
+@mixin textDecoration
+	color: #000
+	background-color: $lightYellow
+	font-weight: bold
+	text-decoration: underline
+	text-shadow: .5px .5px 1px $primaryYellow
+	padding: 5px 10px
+	display: inline-block
+html
+	font-size: 14px
+
+body
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	background-color: $backgroundYellow
+
+.container, .footer
+	padding: 1rem
+	display: flex
+	align-items: flex-end
+	justify-content: center
+	flex-direction: column
+	max-width: 500px
+
+.description
+	@include textDecoration
+	margin: 1rem 0
+	text-align: center
+	width: 100%
+	font-size: 1.6rem
+	padding: 1rem
+	
+	
+.translate, 
+.translated
+	width: 100%
+	height: auto
+	margin: 2rem 0 0 0
+	background-color: $lightWhite
+	padding: 1rem
+	line-height: 1.2rem
+	border: 1px solid rgba(0,0,0,.2)
+	font-size: 1rem
+.translate
+	margin-top: .5rem
+
+.copyToClipboard, .translate__btn
+	margin: 1rem 0
+
+.difficulty__lvl
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	flex-direction: row
+	width: 100%
+
+.diff_lvl
+	margin: 1rem 0 1rem auto
+
+.lvl
+	width: auto
+	@include textDecoration
+
+.btn
+	background-color: $primaryYellow
+	color: #fff
+	border-radius: 5px
+	max-height: 32px
+	padding: .5rem 1rem
+	text-transform: uppercase
+	border: none
+	cursor: pointer
+	color: $lightWhite
+	align-self: flex-end
+	font-size: 12px
+	transition: background .1s ease-in
+	&:hover
+		background-color: $hoverYellow
+
+input[type=range]
+	-webkit-appearance: none
+	width: auto
+	background: transparent
+
+input[type=range]:focus
+	// outline: none
+
+input[type=range]::-ms-track
+	width: auto
+	cursor: pointer
+	background: transparent 
+	border-color: transparent
+	color: transparent
+
+input[type=range]::-webkit-slider-thumb
+	-webkit-appearance: none
+	width: auto
+	cursor: pointer
+	background-color: transparent 
+	border-color: transparent
+	color: transparent
+	height: 30px
+	width: 25px
+	background-image: url($fireIcon)
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	cursor: pointer
+	margin-top: -20px
+	
+
+input[type=range]::-moz-range-thumb
+	height: 30px
+	width: 25px
+	background-image: url($fireIcon)
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	cursor: pointer
+
+input[type=range]::-ms-thumb
+	height: 30px
+	width: 25px
+	background-image: url($fireIcon)
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	cursor: pointer
+
+input[type=range]::-webkit-slider-runnable-track
+	height: 10px
+	cursor: pointer
+	background: linear-gradient(90deg, rgba(255,255,80,1) 30%, rgba(255,0,0,1) 100%)
+	border-radius: 1.3px
+
+input[type=range]::-moz-range-track
+	height: 10px
+	cursor: pointer
+	background: linear-gradient(90deg, rgba(255,255,80,1) 30%, rgba(255,0,0,1) 100%)
+	border-radius: 1.3px
+a
+	@include textDecoration
+	margin-top: 10px
+
+.share
+	text-align: right
+	width: 100%
+
+.lvl__container
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: row
+	height: auto
+
+@media(max-width: 480px)
+	.description
+		font-size: 1.38rem
+	input[type=range]
+		width: 100px
+@media(max-width: 390px)
+	.description
+		font-size: 1.2rem
+	.lvl__container
+		font-size: .8rem
+@media(max-width: 330px)
+	.description
+		font-size: 1rem
