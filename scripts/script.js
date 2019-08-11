@@ -7,7 +7,8 @@ const lvl_0 = {
       "lub": "lup",
       "dst": "ct",
       "ę ": "e ",
-      "łdr": "rdł"
+      "łdr": "rdł",
+      " po co ": " na ciul "
 }, 
 lvl_1 = {
       "rz": "sz",
