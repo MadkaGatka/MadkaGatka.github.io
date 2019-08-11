@@ -77,29 +77,27 @@ const indicateSuccessOrFail = (e, successOrFail, message) => {
 }
 
 const handleCopyToClipboard = e => {
-      // find target element
-    var
-    t = e.target,
-    c = ".translated",
-    inp = (c ? document.querySelector(c) : null);
 
-  // is element selectable?
-  if (inp && inp.select) {
 
-    // select text
-    inp.select();
-    console.log(inp.value.length)
-    inp.setSelectionRange(0, inp.value.length);
-    try {
-      // copy text
-      document.execCommand('copy');
-      indicateSuccessOrFail(e, true, `skopiowano... ${String.fromCodePoint(128520)}`)
-      inp.blur();
-    }
-    catch (err) {
-      indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)}, ${err}`)
-    }
-  }
+
+      if (translated.value.length > 6) {
+
+            // select text
+            translated.select();
+            translated.setSelectionRange(0, translated.value.length);
+            
+            try {
+            // copy text
+                  document.execCommand('copy');
+                  indicateSuccessOrFail(e, true, `skopiowano... ${String.fromCodePoint(128520)}`)
+                  translated.blur();
+            } catch (err) {
+                  indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)}, ${err}`)
+            } 
+      } else {
+            indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 6 znaków`)	
+      }
+
       // if(translated.value.length > 6){
       //       translated.select()
       //       if(document.execCommand("copy")){
