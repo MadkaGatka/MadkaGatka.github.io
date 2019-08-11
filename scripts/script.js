@@ -115,6 +115,7 @@ const handleLvlChange = () => {
             level.push(diffLevelsObj[i])
             toReplace = Object.assign({}, ...[...level])	
       }
+      document.querySelector(".change_level_info ").style.display = "none"
 }
 
 copyToClipboard.addEventListener("click", e => handleCopyToClipboard(e), true)
