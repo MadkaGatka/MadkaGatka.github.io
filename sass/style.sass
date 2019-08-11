@@ -4,7 +4,7 @@ $primaryYellow: #ff9618
 $hoverYellow: #ffa628
 $lightWhite: #fff7e7
 $lightYellow: #ffe89b
-$fireIcon: 'http://tiny.cc/o61saz'
+$fireIcon: 'https://tiny.cc/o61saz'
 *
 	box-sizing: border-box
 	font-family: 'Roboto', sans-serif !important
@@ -27,7 +27,7 @@ body
 	flex-direction: column
 	background-color: $backgroundYellow
 
-.container, .footer
+.container
 	padding: 1rem
 	display: flex
 	align-items: flex-end
@@ -117,6 +117,7 @@ input[type=range]::-webkit-slider-thumb
 	background-image: url($fireIcon)
 	background-size: 100% 100%
 	background-repeat: no-repeat
+	background: transparent
 	cursor: pointer
 	margin-top: -20px
 	
@@ -127,6 +128,7 @@ input[type=range]::-moz-range-thumb
 	background-image: url($fireIcon)
 	background-size: 100% 100%
 	background-repeat: no-repeat
+	background: transparent
 	cursor: pointer
 
 input[type=range]::-ms-thumb
@@ -135,6 +137,7 @@ input[type=range]::-ms-thumb
 	background-image: url($fireIcon)
 	background-size: 100% 100%
 	background-repeat: no-repeat
+	background: transparent
 	cursor: pointer
 
 input[type=range]::-webkit-slider-runnable-track

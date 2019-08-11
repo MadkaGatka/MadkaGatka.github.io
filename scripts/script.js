@@ -78,16 +78,12 @@ const indicateSuccessOrFail = (e, successOrFail, message) => {
 
 const handleCopyToClipboard = e => {
 
-
-
       if (translated.value.length > 6) {
 
-            // select text
             translated.select();
             translated.setSelectionRange(0, translated.value.length);
             
             try {
-            // copy text
                   document.execCommand('copy');
                   indicateSuccessOrFail(e, true, `skopiowano... ${String.fromCodePoint(128520)}`)
                   translated.blur();
@@ -98,16 +94,6 @@ const handleCopyToClipboard = e => {
             indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 6 znaków`)	
       }
 
-      // if(translated.value.length > 6){
-      //       translated.select()
-      //       if(document.execCommand("copy")){
-      //             indicateSuccessOrFail(e, true, `skopiowano... ${String.fromCodePoint(128520)}`)
-      //       } else {
-      //             indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)}`)
-      //       }
-      // } else {
-      //       indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 6 znaków`)	
-      // }
 }
 
 const handleMadkaInit = e => {
