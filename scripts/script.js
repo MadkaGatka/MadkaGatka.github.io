@@ -77,16 +77,39 @@ const indicateSuccessOrFail = (e, successOrFail, message) => {
 }
 
 const handleCopyToClipboard = e => {
-      if(translated.value.length > 6){
-            translated.select()
-            if(document.execCommand("copy")){
-                  indicateSuccessOrFail(e, true, `skopiowano... ${String.fromCodePoint(128520)}`)
-            } else {
-                  indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)}`)
-            }
-      } else {
-            indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 6 znaków`)	
-      }
+      // find target element
+    var
+    t = e.target,
+    c = ".translated",
+    inp = (c ? document.querySelector(c) : null);
+
+  // is element selectable?
+  if (inp && inp.select) {
+
+    // select text
+    inp.select();
+
+    try {
+      // copy text
+      document.execCommand('copy');
+      indicateSuccessOrFail(e, true, `skopiowano... ${String.fromCodePoint(128520)}`)
+      inp.blur();
+    }
+    catch (err) {
+      alert('please press Ctrl/Cmd+C to copy');
+      indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)}, ${err}`)
+    }
+  }
+      // if(translated.value.length > 6){
+      //       translated.select()
+      //       if(document.execCommand("copy")){
+      //             indicateSuccessOrFail(e, true, `skopiowano... ${String.fromCodePoint(128520)}`)
+      //       } else {
+      //             indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)}`)
+      //       }
+      // } else {
+      //       indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 6 znaków`)	
+      // }
 }
 
 const handleMadkaInit = e => {
@@ -114,6 +137,6 @@ const handleLvlChange = () => {
       }
 }
 
-copyToClipboard.addEventListener("click", e => handleCopyToClipboard(e))
+copyToClipboard.addEventListener("click", e => handleCopyToClipboard(e), true)
 translate__btn.addEventListener("click", e => handleMadkaInit(e))
 diff_lvl.addEventListener("input", handleLvlChange)
