@@ -1,5 +1,3 @@
-// jakbyście chcieli popisać z madkami jak równy z równym prezentuje translator madkowy :D
-
 const lvl_0 = {
       "trz": "cz",
       "mógł": "mug",
@@ -77,7 +75,6 @@ const indicateSuccessOrFail = (e, successOrFail, message) => {
 }
 
 const handleCopyToClipboard = e => {
-
       if (translated.value.length > 6) {
 
             translated.select();
@@ -93,7 +90,6 @@ const handleCopyToClipboard = e => {
       } else {
             indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 6 znaków`)	
       }
-
 }
 
 const handleMadkaInit = e => {
