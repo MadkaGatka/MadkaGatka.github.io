@@ -88,7 +88,8 @@ const handleCopyToClipboard = e => {
 
     // select text
     inp.select();
-
+    console.log(inp.value.length)
+    inp.setSelectionRange(0, inp.value.length);
     try {
       // copy text
       document.execCommand('copy');
@@ -96,7 +97,6 @@ const handleCopyToClipboard = e => {
       inp.blur();
     }
     catch (err) {
-      alert('please press Ctrl/Cmd+C to copy');
       indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)}, ${err}`)
     }
   }
