@@ -1,6 +1,5 @@
 const
       lvl_0 = {
-            "trz": "cz",
             "mógł": "mug",
             "ó": "u",
             "lub": "lup",
@@ -14,15 +13,14 @@ const
             "chrzciny": "kściny"
       },
       lvl_1 = {
-            "rz": "sz",
             "ż": "z",
             "łąc": "łonc",
             "ąd": 'ont',
-            "ą": "om",
             "po": "po ",
             "bez": "bes",
             "ch": "h",
             "mnie": "mje",
+            "wstrząsnęło": "fszczonsło",
             "wieczność": "wietrznosc",
             "wiecznosc": "wietrznosc"
       },
@@ -30,13 +28,15 @@ const
             "wtedy": "ftedy",
             "cj": "ci",
             "dla": "dla ",
+            "rz": "sz",
             "ł": "l",
             "mąż": "monsz",
             "kiedykolwiek": "kiedy kolwiek",
             " tez ": " tesz ",
             "czekolade": "czyczekolatke",
             "czekoladki": "czyczekolatki",
-            "czekolada": "czyczekolatka"
+            "czekolada": "czyczekolatka",
+            "trz": "cz"
       },
       lvl_3 = {
             "nie": "ni",
@@ -44,6 +44,7 @@ const
             "ię": "ien",
             "br": "rb",
             "ie": "ei",
+            "ą": "om",
             "chuj": "hój",
             "konkubent": "kąłkubent"
       },
