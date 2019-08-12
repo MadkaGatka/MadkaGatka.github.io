@@ -91,16 +91,18 @@ const indicateSuccessOrFail = (e, successOrFail, message) => {
 
 const handleCopyToClipboard = e => {
       if (translated.value.length > 6) {
-
+            const primaryValue = translated.value
+            translated.value += "## with ❤ madkagatka ##"
             translated.select();
             translated.setSelectionRange(0, translated.value.length);
-
             try {
                   document.execCommand('copy');
                   indicateSuccessOrFail(e, true, `skopiowano... ${String.fromCodePoint(128520)}`)
+                  translated.value = primaryValue
                   translated.blur();
             } catch (err) {
                   indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)}, ${err}`)
+                  translated.value = primaryValue
             }
       } else {
             indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 6 znaków`)
