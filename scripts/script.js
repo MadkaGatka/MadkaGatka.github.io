@@ -51,7 +51,7 @@ const
             "konkubent": "kąłkubent"
       },
       lvl_4 = {
-            "co": "co kurwa",
+            "co ": "co kurwa ",
             ",": " kurwa",
             "dzeicko": "bombelek",
             "dzeici": "kaszojady",
