@@ -24,6 +24,7 @@ body {
   justify-content: center;
   flex-direction: column;
   max-width: 500px;
+  position: relative;
 }
 
 .description {
@@ -34,7 +35,7 @@ body {
   text-shadow: 0.5px 0.5px 1px #ff9618;
   padding: 5px 10px;
   display: inline-block;
-  margin: 1rem 0;
+  margin: 2rem 0 1rem 0;
   text-align: center;
   width: 100%;
   font-size: 1.6rem;
@@ -54,7 +55,7 @@ body {
 }
 
 .translate {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .copyToClipboard, .translate__btn {
@@ -68,6 +69,7 @@ body {
   flex-direction: row;
   width: 100%;
   position: relative;
+  /* margin-top: .5rem; */
 }
 
 .diff_lvl {
@@ -214,6 +216,35 @@ a {
   pointer-events: none;
 }
 
+.modal__cookies {
+  color: #000;
+  background-color: #ffe89b;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px 1px #ff9618;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+  width: auto;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid #fcd654;
+}
+.modal__cookies a{
+  padding: 0;
+  margin: 0 1rem 0 0;
+}
+
+.close__modal {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
 .info_arrow {
   position: relative;
   transform: scaleX(-1) rotate(45deg);
@@ -289,11 +320,6 @@ a {
   .description {
     font-size: 1.2rem;
   }
-
-  .lvl__container {
-    font-size: 0.8rem;
-  }
-
   
   input[type=range] {
     width: 100px;

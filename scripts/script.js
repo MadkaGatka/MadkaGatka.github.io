@@ -57,7 +57,7 @@ const
             "dzeicko": "bombelek",
             "dzeici": "kaszojady",
             "św": "śf",
-            "sz": "sh",
+            // "sz": "sh",
             "\\.": "",
             "to to nic": "to to chuj"
       }
@@ -143,3 +143,10 @@ const hideHelper = () => {
 copyToClipboard.addEventListener("click", e => handleCopyToClipboard(e), true)
 translate__btn.addEventListener("click", e => handleMadkaInit(e))
 diff_lvl.addEventListener("input", handleLvlChange)
+
+const closeModal = document.querySelector(".close__modal")
+
+closeModal.addEventListener("click", () => {
+      document.querySelector(".modal__cookies").classList.add("hidden")
+      document.querySelector(".description").style.marginTop = "0"
+})
