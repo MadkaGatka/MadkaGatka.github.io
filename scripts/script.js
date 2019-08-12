@@ -18,6 +18,7 @@ const
             "ąd": 'ont',
             "po": "po ",
             "bez": "bes",
+            "sobie": "se",
             "ch": "h",
             "mnie": "mje",
             "wstrząsnęło": "fszczonsło",
