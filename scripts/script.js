@@ -54,7 +54,8 @@ const
             "dziecko": "bombelek",
             "dzeici": "kaszojady",
             "św": "śf",
-            "sz": "sh"
+            "sz": "sh",
+            ".": ""
       }
 
 let toReplace = lvl_0
