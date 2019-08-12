@@ -55,7 +55,8 @@ const
             "dzeici": "kaszojady",
             "św": "śf",
             "sz": "sh",
-            "\\.": ""
+            "\\.": "",
+            "to to nic": "to to chuj"
       }
 
 let toReplace = lvl_0
