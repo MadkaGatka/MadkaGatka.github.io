@@ -46,6 +46,7 @@ const
             "br": "rb",
             "ie": "ei",
             "ą": "om",
+            "pić": "hlac",
             "chuj": "hój",
             "konkubent": "kąłkubent"
       },
