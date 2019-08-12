@@ -11,7 +11,7 @@ const
             "mąk": "monk",
             "po co": "na ciul",
             "ń": "ni",
-            "chrzściny": "kściny"
+            "chrzciny": "kściny"
       },
       lvl_1 = {
             "rz": "sz",
