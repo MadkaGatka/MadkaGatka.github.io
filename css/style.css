@@ -242,6 +242,24 @@ a {
   padding: 5px 10px;
   display: inline-block;
 }
+
+.heart {
+  animation: wiggle 3s 5s infinite alternate forwards;
+  display: inline-block;
+}
+
+@keyframes wiggle{
+  90% {
+    transform: rotate(0deg);
+  }
+  95% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 @media(max-width: 480px) {
   .description {
     font-size: 1.38rem;
