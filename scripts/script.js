@@ -9,7 +9,8 @@ const
             "łdr": "rdł",
             "łąk": "łonk",
             "mąk": "monk",
-            "po co": "na ciul"
+            "po co": "na ciul",
+            "ń": "ni"
       },
       lvl_1 = {
             "rz": "sz",
