@@ -246,7 +246,9 @@ a {
   text-decoration: none;
   font-size: 14px;
   border-color: transparent;
+  display: flex;
 }
+
 .info_arrow {
   position: relative;
   transform: scaleX(-1) rotate(45deg);
