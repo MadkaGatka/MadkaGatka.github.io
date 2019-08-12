@@ -51,11 +51,10 @@ const
       lvl_4 = {
             "co": "co kurwa",
             ",": " kurwa",
-            "dziecko": "bombelek",
+            "dzeicko": "bombelek",
             "dzeici": "kaszojady",
             "św": "śf",
-            "sz": "sh",
-            ".": ""
+            "sz": "sh"
       }
 
 let toReplace = lvl_0
