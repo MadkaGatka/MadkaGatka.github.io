@@ -205,6 +205,12 @@ a {
   white-space: nowrap;
 }
 
+.hidden {
+  transition: all .3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .info_arrow {
   position: relative;
   transform: scaleX(-1) rotate(45deg);

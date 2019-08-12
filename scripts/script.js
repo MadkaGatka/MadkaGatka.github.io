@@ -137,7 +137,7 @@ const handleLvlChange = () => {
 }
 
 const hideHelper = () => {
-      document.querySelector(".change_level_info ").style.display = "none"
+      document.querySelector(".change_level_info ").classList.add("hidden")
 }
 
 copyToClipboard.addEventListener("click", e => handleCopyToClipboard(e), true)
