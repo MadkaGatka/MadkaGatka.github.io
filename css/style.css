@@ -244,6 +244,8 @@ a {
   border: none;
   cursor: pointer;
   text-decoration: none;
+  font-size: 14px;
+  border-color: transparent;
 }
 .info_arrow {
   position: relative;
