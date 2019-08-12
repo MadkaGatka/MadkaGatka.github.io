@@ -91,8 +91,9 @@ body {
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   border: none;
+  font-weight: bold;
   cursor: pointer;
-  color: #fff7e7;
+  color:#000;
   align-self: flex-end;
   font-size: 12px;
   transition: background 0.1s ease-in;
