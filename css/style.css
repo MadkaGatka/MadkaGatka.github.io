@@ -247,6 +247,7 @@ a {
   font-size: 14px;
   border-color: transparent;
   display: flex;
+  padding-right: 0;
 }
 
 .info_arrow {
