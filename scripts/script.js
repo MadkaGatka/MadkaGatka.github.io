@@ -1,62 +1,65 @@
-const lvl_0 = {
-      "trz": "cz",
-      "mógł": "mug",
-      "ó": "u",
-      "lub": "lup",
-      "dst": "ct",
-      "ę ": "e ",
-      "łdr": "rdł",
-      "po co": "na ciul"
-}, 
-lvl_1 = {
-      "rz": "sz",
-      "ż": "z",
-      "łąc": "łonc",
-      "ąd": 'ont',
-      "ą": "om",
-      "po": "po ",
-      "bez": "bes",
-      "ch": "h",	
-      "mnie": "mje"
-}, 
-lvl_2 = {
-      "wtedy": "ftedy",
-      "cj": "ci",
-      "dla": "dla ",
-      "ł": "l",
-      "mąż": "monsz",
-      "kiedykolwiek": "kiedy kolwiek",
-      " tez ": " tesz ",
-      "czekolade": "czyczekolatke",
-      "czekoladki": "czyczekolatki",
-      "czekolada": "czyczekolatka"
-}, 
-lvl_3 = {
-      "nie": "ni",
-      "em": "ę",
-      "ię": "ien",
-      "br": "rb",
-      "ie": "ei",
-      "chuj": "hój"
-}, 
-lvl_4 = {
-      "co": "co kurwa",
-      ",": " kurwa",
-      "dziecko": "bombelek",
-      "dzeici": "kaszojady",
-      "św": "śf"
-}
+const
+      lvl_0 = {
+            "trz": "cz",
+            "mógł": "mug",
+            "ó": "u",
+            "lub": "lup",
+            "dst": "ct",
+            "ę ": "e ",
+            "łdr": "rdł",
+            "po co": "na ciul"
+      },
+      lvl_1 = {
+            "rz": "sz",
+            "ż": "z",
+            "łąc": "łonc",
+            "ąd": 'ont',
+            "ą": "om",
+            "po": "po ",
+            "bez": "bes",
+            "ch": "h",
+            "mnie": "mje",
+            "wieczność": "wietrznosc",
+            "wiecznosc": "wietrznosc"
+      },
+      lvl_2 = {
+            "wtedy": "ftedy",
+            "cj": "ci",
+            "dla": "dla ",
+            "ł": "l",
+            "mąż": "monsz",
+            "kiedykolwiek": "kiedy kolwiek",
+            " tez ": " tesz ",
+            "czekolade": "czyczekolatke",
+            "czekoladki": "czyczekolatki",
+            "czekolada": "czyczekolatka"
+      },
+      lvl_3 = {
+            "nie": "ni",
+            "em": "ę",
+            "ię": "ien",
+            "br": "rb",
+            "ie": "ei",
+            "chuj": "hój"
+      },
+      lvl_4 = {
+            "co": "co kurwa",
+            ",": " kurwa",
+            "dziecko": "bombelek",
+            "dzeici": "kaszojady",
+            "św": "śf"
+      }
 
 let toReplace = lvl_0
 const diffLevelsObj = [lvl_0, lvl_1, lvl_2, lvl_3, lvl_4]
 
 const madkaMade = () => {
-      if(translate.value.length < 10) return false
+      if (translate.value.length < 10) return false
 
       let str = translate.value
       Object.entries(toReplace).forEach(([key, value]) => {
             const regex = new RegExp(key, "gi");
-            str = str.replace(regex, value)	
+            str = str.replace(regex, value)
       })
       translated.value = str
       return translated.value === str ? true : false
@@ -79,21 +82,21 @@ const handleCopyToClipboard = e => {
 
             translated.select();
             translated.setSelectionRange(0, translated.value.length);
-            
+
             try {
                   document.execCommand('copy');
                   indicateSuccessOrFail(e, true, `skopiowano... ${String.fromCodePoint(128520)}`)
                   translated.blur();
             } catch (err) {
                   indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)}, ${err}`)
-            } 
+            }
       } else {
-            indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 6 znaków`)	
+            indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 6 znaków`)
       }
 }
 
 const handleMadkaInit = e => {
-      if(madkaMade()) {
+      if (madkaMade()) {
             indicateSuccessOrFail(e, true, `tłumaczenie... ${String.fromCodePoint(128519)}`)
       } else {
             indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)} min. 10 znaków`)
@@ -103,17 +106,17 @@ const handleMadkaInit = e => {
 const handleLvlChange = () => {
       const level = [],
             diffLevels = [
-                        "latwy", 
-                        "500+", 
-                        "uśmieh bombelka", 
-                        "madka po 3 CC",
-                        "sytuacia kauowa"
-                        ]
+                  "latwy",
+                  "500+",
+                  "uśmieh bombelka",
+                  "madka po 3 CC",
+                  "sytuacia kauowa"
+            ]
 
       lvl.textContent = diffLevels[diff_lvl.value]
-      for(let i = 0; i <= diff_lvl.value; i++){
+      for (let i = 0; i <= diff_lvl.value; i++) {
             level.push(diffLevelsObj[i])
-            toReplace = Object.assign({}, ...[...level])	
+            toReplace = Object.assign({}, ...[...level])
       }
       document.querySelector(".change_level_info ").style.display = "none"
 }
