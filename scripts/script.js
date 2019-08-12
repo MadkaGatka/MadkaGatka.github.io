@@ -43,7 +43,8 @@ const
             "ię": "ien",
             "br": "rb",
             "ie": "ei",
-            "chuj": "hój"
+            "chuj": "hój",
+            "konkubent": "kąłkubent"
       },
       lvl_4 = {
             "co": "co kurwa",
