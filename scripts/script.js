@@ -48,7 +48,8 @@ const
             "ą": "om",
             "pić": "hlac",
             "chuj": "hój",
-            "konkubent": "kąłkubent"
+            "konkubent": "kąłkubent",
+            "luzko": "użko"
       },
       lvl_4 = {
             "co ": "co kurwa ",
