@@ -92,7 +92,7 @@ const indicateSuccessOrFail = (e, successOrFail, message) => {
 const handleCopyToClipboard = e => {
       if (translated.value.length > 6) {
             const primaryValue = translated.value
-            translated.value += "\n# with ❤ madkagatka #"
+            translated.value += "\n# with ❤ https://madkagatka.github.io"
             translated.select();
             translated.setSelectionRange(0, translated.value.length);
             try {
