@@ -7,6 +7,8 @@ const
             "dst": "ct",
             "ę ": "e ",
             "łdr": "rdł",
+            "łąk": "łonk",
+            "mąk": "monk",
             "po co": "na ciul"
       },
       lvl_1 = {
@@ -53,7 +55,7 @@ const
 let toReplace = lvl_0
 const diffLevelsObj = [lvl_0, lvl_1, lvl_2, lvl_3, lvl_4]
 
-const madkaMade = () => {
+const handleTranslate = () => {
       if (translate.value.length < 10) return false
 
       let str = translate.value
@@ -96,8 +98,9 @@ const handleCopyToClipboard = e => {
 }
 
 const handleMadkaInit = e => {
-      if (madkaMade()) {
+      if (handleTranslate()) {
             indicateSuccessOrFail(e, true, `tłumaczenie... ${String.fromCodePoint(128519)}`)
+            hideHelper()
       } else {
             indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)} min. 10 znaków`)
       }
@@ -118,6 +121,10 @@ const handleLvlChange = () => {
             level.push(diffLevelsObj[i])
             toReplace = Object.assign({}, ...[...level])
       }
+      hideHelper()
+}
+
+const hideHelper = () => {
       document.querySelector(".change_level_info ").style.display = "none"
 }
 
