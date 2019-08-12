@@ -50,7 +50,8 @@ const
             ",": " kurwa",
             "dziecko": "bombelek",
             "dzeici": "kaszojady",
-            "św": "śf"
+            "św": "śf",
+            "sz": "sh"
       }
 
 let toReplace = lvl_0
