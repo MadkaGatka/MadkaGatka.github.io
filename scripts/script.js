@@ -1,5 +1,5 @@
 const
-      lvl_0 = {
+      lvl_1 = {
             "mógł": "mug",
             "ó": "u",
             "lub": "lup",
@@ -12,7 +12,7 @@ const
             "ń": "ni",
             "chrzciny": "kściny"
       },
-      lvl_1 = {
+      lvl_2 = {
             "ż": "z",
             "łąc": "łonc",
             "ąd": 'ont',
@@ -23,9 +23,10 @@ const
             "mnie": "mje",
             "wstrząsnęło": "fszczonsło",
             "wieczność": "wietrznosc",
-            "wiecznosc": "wietrznosc"
+            "wiecznosc": "wietrznosc",
+            "nerwuw": "nerw"
       },
-      lvl_2 = {
+      lvl_3 = {
             "wtedy": "ftedy",
             "cj": "ci",
             "dla": "dla ",
@@ -41,7 +42,7 @@ const
             "miesiąc": "msc",
             "miesięcy": "mscy"
       },
-      lvl_3 = {
+      lvl_4 = {
             "nie": "ni",
             "em": "ę",
             "ię": "ien",
@@ -53,7 +54,7 @@ const
             "konkubent": "kąłkubent",
             "luzko": "użko"
       },
-      lvl_4 = {
+      lvl_5 = {
             "co ": "co kurwa ",
             ",": " kurwa",
             "dzeicko": "bombelek",
@@ -64,8 +65,8 @@ const
             "to to nic": "to to chuj"
       }
 
-let toReplace = lvl_0
-const diffLevelsObj = [lvl_0, lvl_1, lvl_2, lvl_3, lvl_4]
+let toReplace = lvl_1
+const diffLevelsObj = [lvl_1, lvl_2, lvl_3, lvl_4, lvl_5]
 
 const handleTranslate = () => {
       if (translate.value.length < 10) return false
