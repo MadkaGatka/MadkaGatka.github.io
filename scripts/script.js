@@ -10,10 +10,14 @@ const
             "mąk": "monk",
             "po co": "na ciul",
             "ń": "ni",
-            "chrzciny": "kściny"
+            "chrzciny": "kściny",
+            "biore": "biere",
+            "piździ": "pizga",
+            "iść": "iźć"
       },
       lvl_2 = {
             "ż": "z",
+            "dź": "ć",
             "łąc": "łonc",
             "ąd": 'ont',
             "po": "po ",
@@ -24,7 +28,8 @@ const
             "wstrząsnęło": "fszczonsło",
             "wieczność": "wietrznosc",
             "wiecznosc": "wietrznosc",
-            "nerwuw": "nerw"
+            "nerwuw": "nerw",
+            "karze": "każe"
       },
       lvl_3 = {
             "wtedy": "ftedy",
@@ -48,7 +53,8 @@ const
             "ię": "ien",
             "br": "rb",
             "ie": "ei",
-            "ą": "om",
+            "ą ": "om ",
+            "ą": "on",
             "pić": "hlac",
             "chuj": "hój",
             "konkubent": "kąłkubent",
@@ -62,7 +68,9 @@ const
             "św": "śf",
             // "sz": "sh",
             "\\.": "",
-            "to to nic": "to to chuj"
+            "to to nic": "to to chuj",
+            "mefedron": "mefedronik",
+            "amfetamina": "amfetaminka"
       }
 
 let toReplace = lvl_1
