@@ -13,7 +13,9 @@ const
             "chrzciny": "kściny",
             "biore": "biere",
             "piździ": "pizga",
-            "iść": "iźć"
+            "iść": "iźć",
+            "najzabawniejsze": "majzabawnijsze",
+            "tłumaczenia": "tumaczenia"
       },
       lvl_2 = {
             "ż": "z",
@@ -161,3 +163,23 @@ closeModal.addEventListener("click", () => {
       document.querySelector(".modal__cookies").classList.add("hidden")
       document.querySelector(".description").style.marginTop = "0"
 })
+
+// funniest translations found
+const loadFunniestTranslations = () => {
+      const funniestTranslations = ["1","2","3","4","5"];
+      const translationsContainer = document.querySelector(".funniest__translations")
+      
+
+      translationsContainer.innerHTML = ""
+      funniestTranslations.forEach( picture => {
+            translationsContainer.innerHTML += `<div class="image__container"><a href="../img/funniest/${picture}.jpg"><img src="../img/funniest/${picture}.jpg" alt="funny nr. ${picture}"></a></div>`
+      })
+}
+
+if( document.readyState !== 'loading' ) {
+      loadFunniestTranslations();
+} else {
+      document.addEventListener('DOMContentLoaded', loadFunniestTranslations);
+}
+  
+
