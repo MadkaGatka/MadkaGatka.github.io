@@ -19,7 +19,7 @@ const
             "ż": "z",
             "dź": "ć",
             "łąc": "łonc",
-            "ąd": 'ont',
+            "ąd ": 'ont ',
             "po": "po ",
             "bez": "bes",
             "sobie": "se",
