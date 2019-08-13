@@ -37,7 +37,9 @@ const
             "czekolade": "czyczekolatke",
             "czekoladki": "czyczekolatki",
             "czekolada": "czyczekolatka",
-            "trz": "cz"
+            "trz": "cz",
+            "miesiąc": "msc",
+            "miesięcy": "mscy"
       },
       lvl_3 = {
             "nie": "ni",
