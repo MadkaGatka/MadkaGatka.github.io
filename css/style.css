@@ -352,6 +352,9 @@ a {
   .description {
     font-size: 1.2rem;
   }
+  .image__container {
+    width: 50%;
+  }
   
   input[type=range] {
     width: 100px;
