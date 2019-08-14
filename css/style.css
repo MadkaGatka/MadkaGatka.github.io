@@ -59,10 +59,6 @@ body {
   margin-top: 1rem;
 }
 
-.copyToClipboard, .translate__btn {
-  margin: 1rem 0;
-}
-
 .difficulty__lvl {
   display: flex;
   align-items: center;
@@ -113,6 +109,17 @@ body {
   width: 100%;
 }
 
+.last__update {
+  font-size: 10px;
+  display: block;
+  margin: 1rem 0;
+}
+.btns__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 .btn {
   background-color: #ff9618;
   color: #fff;
@@ -127,6 +134,7 @@ body {
   align-self: flex-end;
   font-size: 12px;
   transition: background 0.1s ease-in;
+  margin: 1rem 0;
 }
 .btn:hover {
   background-color: #ffa628;

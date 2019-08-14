@@ -15,9 +15,19 @@ const
             "piździ": "pizga",
             "iść": "iźć",
             "najzabawniejsze": "majzabawnijsze",
-            "tłumaczenia": "tumaczenia"
+            "tłumaczenia": "tumaczenia",
+            "cot toy": "kontoj",
+            "prenatalne": "planetarne",
+            "cv": "sybi",
+            "w ciąży": "brzuchatka",
+            "żyrandol": "rzelandor",
+            "quinny": "kłyni",
+            "owacje": "owulacje",
+            "autopsji": "eutanazji",
+            "kapcie": "ciapetki",
       },
       lvl_2 = {
+            "dżentelmen": "denczelment",
             "ż": "z",
             "dź": "ć",
             "łąc": "łonc",
@@ -27,6 +37,10 @@ const
             "sobie": "se",
             "ch": "h",
             "mnie": "mje",
+            "kombinezon": "kombionez",
+            "atopowe": "atomowe",
+            "kaustyczna": "akustyczna",
+            "labrador": "rabrablador",
             "wstrząsnęło": "fszczonsło",
             "wieczność": "wietrznosc",
             "wiecznosc": "wietrznosc",
@@ -34,6 +48,11 @@ const
             "karze": "każe"
       },
       lvl_3 = {
+            " nie urodziła dziecka": " jest bespłodnica",
+            " nie urodzila zadnego dzeicka": " jest bespłodnica",
+            " nie urodzila dziecka": " jest bespłodnica",
+            " nie ma dziecka": " jest lambadziara",
+            " nie ma dzieci": " jest lambadziara",
             "wtedy": "ftedy",
             "cj": "ci",
             "dla": "dla ",
@@ -47,20 +66,23 @@ const
             "czekolada": "czyczekolatka",
             "trz": "cz",
             "miesiąc": "msc",
-            "miesięcy": "mscy"
+            "miesięcy": "mscy",
+            "matka": "madka",
+            "matką": "madkom"
       },
       lvl_4 = {
-            "nie": "ni",
             "em": "ę",
             "ię": "ien",
             "br": "rb",
-            "ie": "ei",
+            "nie": "ni",
             "ą ": "om ",
             "ą": "on",
             "pić": "hlac",
             "chuj": "hój",
             "konkubent": "kąłkubent",
-            "luzko": "użko"
+            "luzko": "użko",
+            "pneumokoki": "monokoko",
+            "meningokoki": "monokoki"
       },
       lvl_5 = {
             "co ": "co kurwa ",
@@ -68,11 +90,15 @@ const
             "dzeicko": "bombelek",
             "dzeici": "kaszojady",
             "św": "śf",
+            "konsultantka": "kąsultantka",
             // "sz": "sh",
             "\\.": "",
+            "\\?": "",
+            "\\!": "!!1!111",
             "to to nic": "to to chuj",
             "mefedron": "mefedronik",
-            "amfetamina": "amfetaminka"
+            "amfetamina": "amfetaminka",
+            "ie": "ei",
       }
 
 let toReplace = lvl_1
@@ -82,6 +108,9 @@ const handleTranslate = () => {
       if (translate.value.length < 10) return false
 
       let str = translate.value
+      str.trim()
+      str += " "
+
       Object.entries(toReplace).forEach(([key, value]) => {
             const regex = new RegExp(key, "gi");
             str = str.replace(regex, value)
@@ -127,7 +156,7 @@ const handleMadkaInit = e => {
             indicateSuccessOrFail(e, true, `tłumaczenie... ${String.fromCodePoint(128519)}`)
             hideHelper()
       } else {
-            indicateSuccessOrFail(e, false, `ups... coś poszło nie tak ${String.fromCodePoint(128557)} min. 10 znaków`)
+            indicateSuccessOrFail(e, false, `ups... ${String.fromCodePoint(128557)} min. 10 znaków`)
       }
 }
 
@@ -153,33 +182,41 @@ const hideHelper = () => {
       document.querySelector(".change_level_info ").classList.add("hidden")
 }
 
-copyToClipboard.addEventListener("click", e => handleCopyToClipboard(e), true)
-translate__btn.addEventListener("click", e => handleMadkaInit(e))
-diff_lvl.addEventListener("input", handleLvlChange)
-
 const closeModal = document.querySelector(".close__modal")
 
 closeModal.addEventListener("click", () => {
       document.querySelector(".modal__cookies").classList.add("hidden")
       document.querySelector(".description").style.marginTop = "0"
 })
+translate.addEventListener("input", hideHelper)
+
+clearTranslateBtn.addEventListener("click", () => {
+      translate.value = ""
+      hideHelper()
+})
+
+copyToClipboard.addEventListener("click", e => handleCopyToClipboard(e), true)
+translate__btn.addEventListener("click", e => handleMadkaInit(e))
+diff_lvl.addEventListener("input", handleLvlChange)
+
+
 
 // funniest translations found
 const loadFunniestTranslations = () => {
-      const funniestTranslations = ["1","2","3","4","5"];
+      const funniestTranslations = ["1", "2", "3", "4", "5"];
       const translationsContainer = document.querySelector(".funniest__translations")
-      
+
 
       translationsContainer.innerHTML = ""
-      funniestTranslations.forEach( picture => {
+      funniestTranslations.forEach(picture => {
             translationsContainer.innerHTML += `<div class="image__container"><a href="../img/funniest/${picture}.jpg"><img src="../img/funniest/${picture}.jpg" alt="funny nr. ${picture}"></a></div>`
       })
 }
 
-if( document.readyState !== 'loading' ) {
+if (document.readyState !== 'loading') {
       loadFunniestTranslations();
 } else {
       document.addEventListener('DOMContentLoaded', loadFunniestTranslations);
 }
-  
+
 

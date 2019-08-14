@@ -53,12 +53,15 @@
                   Pisz z madką jak równy z równym 👊
             </h1>
             <div class="modal__cookies">
-                  <span>Facebook używa cookiesów - <a href="https://www.facebook.com/policy/cookies/" rel="noopener" target="_blank">regulamin</a></span>
+                  <span>Facebook używa cookiesów - <a href="https://www.facebook.com/policy/cookies/" rel="noopener"
+                              target="_blank">regulamin</a></span>
                   <button class="close__modal" aria-label="close cookie info">
                         <svg class="svg-icon" viewBox="0 0 20 20" style="height: 16px;">
-					<path fill="black" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
-				</svg>
-            </button>
+                              <path fill="black"
+                                    d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+                              </path>
+                        </svg>
+                  </button>
             </div>
             <h2 class="difficulty__lvl">
                   <div class="lvl__container">
@@ -74,11 +77,14 @@
             <label for="translate" class="visuallyhidden">Wpisz tekst do przetłumaczenia:</label>
             <textarea name="translate" id="translate" cols="90" rows="10" class="translate"
                   spellcheck="true">Potrzebne są krzesła bo nie ma na czym usiąść, a dzieci też by chciały się kiedykolwiek pobawić. </textarea>
-            <button class="translate__btn btn" id="translate__btn">po madkowemu</button>
+            <div class="btns__container">
+                  <button class="clear__btn btn" id="clearTranslateBtn">wyczyść</button>
+                  <button class="translate__btn btn" id="translate__btn">po madkowemu</button>
+            </div>
 
             <label for="translated" class="visuallyhidden">Wynik tłumaczenia:</label>
             <textarea class="translated" id="translated" cols="90" rows="10" spellcheck="false"></textarea>
-            
+
             <div class="made__with__love__container">
                   <div class="cheers">
                         with <span class="heart">❤</span> madkagatka
@@ -103,6 +109,7 @@
             </div>
             <p>
                   Kontakt: <a href="mailto:madka.gatka@wp.pl">madka.gatka@wp.pl</a>
+                  <span class="last__update">Ostatnia aktualizacja słownika: 14.08.2019</span>
             </p>
       </footer>
       <script async src="scripts/script.js"></script>
