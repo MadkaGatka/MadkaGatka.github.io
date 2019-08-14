@@ -48,9 +48,12 @@ const
             "karze": "każe"
       },
       lvl_3 = {
+
+            " nie urodziła dzieci": " jest bespłodnica",
             " nie urodziła dziecka": " jest bespłodnica",
             " nie urodzila zadnego dzeicka": " jest bespłodnica",
             " nie urodzila dziecka": " jest bespłodnica",
+            " nie urodziła": " jest bespłodnica",
             " nie ma dziecka": " jest lambadziara",
             " nie ma dzieci": " jest lambadziara",
             "wtedy": "ftedy",
@@ -90,6 +93,8 @@ const
             ",": " kurwa",
             "dzeicko": "bombelek",
             "dzeici": "kaszojady",
+            "dzieckiem": "bombelkiem",
+            "dzeickein": "bombelkiem",
             "św": "śf",
             "konsultantka": "kąsultantka",
             // "sz": "sh",
