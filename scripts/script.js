@@ -208,7 +208,7 @@ diff_lvl.addEventListener("input", handleLvlChange)
 
 // funniest translations found
 const loadFunniestTranslations = () => {
-      const funniestTranslations = ["1", "2", "3", "4", "5"];
+      const funniestTranslations = ["1", "2", "3", "4", "5", "6"];
       const translationsContainer = document.querySelector(".funniest__translations")
 
 
