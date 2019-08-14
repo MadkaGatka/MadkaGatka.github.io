@@ -183,17 +183,30 @@ const handleLvlChange = () => {
       hideHelper()
 }
 
-const hideHelper = () => {
-      document.querySelector(".change_level_info ").classList.add("hidden")
+const changeLevelHelper = document.querySelector(".change_level_info ")
+if (!localStorage.getItem('hideHelper')) {
+      changeLevelHelper.style.display = "block"
 }
 
+const hideHelper = () => {
+      changeLevelHelper.classList.add("hidden")
+      localStorage.setItem('hideHelper', true);
+}
+translate.addEventListener("input", hideHelper)
+
+
 const closeModal = document.querySelector(".close__modal")
+const modalCookies = document.querySelector(".modal__cookies")
+if (!localStorage.getItem('hideCookiesModal')) {
+      modalCookies.style.display = "flex"
+      document.querySelector(".description").style.marginTop = "2rem"
+}
 
 closeModal.addEventListener("click", () => {
-      document.querySelector(".modal__cookies").classList.add("hidden")
+      modalCookies.classList.add("hidden")
       document.querySelector(".description").style.marginTop = "0"
+      localStorage.setItem('hideCookiesModal', true);
 })
-translate.addEventListener("input", hideHelper)
 
 clearTranslateBtn.addEventListener("click", () => {
       translate.value = ""
@@ -204,9 +217,7 @@ copyToClipboard.addEventListener("click", e => handleCopyToClipboard(e), true)
 translate__btn.addEventListener("click", e => handleMadkaInit(e))
 diff_lvl.addEventListener("input", handleLvlChange)
 
-
-
-// funniest translations found
+// funniest translations founded on fb
 const loadFunniestTranslations = () => {
       const funniestTranslations = ["1", "2", "3", "4", "5", "6"];
       const translationsContainer = document.querySelector(".funniest__translations")
@@ -223,5 +234,3 @@ if (document.readyState !== 'loading') {
 } else {
       document.addEventListener('DOMContentLoaded', loadFunniestTranslations);
 }
-
-
