@@ -45,7 +45,8 @@ const
             "wieczność": "wietrznosc",
             "wiecznosc": "wietrznosc",
             "nerwuw": "nerw",
-            "karze": "każe"
+            "karze": "każe",
+            "głupia": "głupia krowa"
       },
       lvl_3 = {
 
