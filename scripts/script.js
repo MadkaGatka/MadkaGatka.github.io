@@ -82,7 +82,8 @@ const
             "konkubent": "kąłkubent",
             "luzko": "użko",
             "pneumokoki": "monokoko",
-            "meningokoki": "monokoki"
+            "meningokoki": "monokoki",
+            "\\!": "!!1!111"
       },
       lvl_5 = {
             "co ": "co kurwa ",
@@ -94,7 +95,6 @@ const
             // "sz": "sh",
             "\\.": "",
             "\\?": "",
-            "\\!": "!!1!111",
             "to to nic": "to to chuj",
             "mefedron": "mefedronik",
             "amfetamina": "amfetaminka",
