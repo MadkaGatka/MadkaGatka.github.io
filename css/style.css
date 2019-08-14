@@ -122,19 +122,20 @@ body {
 }
 .btn {
   background-color: #ff9618;
-  color: #fff;
   border-radius: 5px;
   height: 32px;
   padding: 0.5rem 1rem;
+  margin: 1rem 0;
   text-transform: uppercase;
   border: none;
   font-weight: bold;
   cursor: pointer;
   color:#000;
-  align-self: flex-end;
   font-size: 12px;
   transition: background 0.1s ease-in;
-  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn:hover {
   background-color: #ffa628;
