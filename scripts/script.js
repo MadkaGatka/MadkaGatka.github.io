@@ -24,7 +24,8 @@ const
             "quinny": "kłyni",
             "owacje": "owulacje",
             "autopsji": "eutanazji",
-            "kapcie": "ciapetki",
+            "kapcie": "ciapetki"
+            // "brzuch": "brzucho"
       },
       lvl_2 = {
             "dżentelmen": "denczelment",
